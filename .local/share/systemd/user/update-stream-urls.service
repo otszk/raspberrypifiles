@@ -1,0 +1,8 @@
+[Unit]
+Description=Update webradio stream URLs
+
+[Service]
+ExecStart=/usr/bin/python3 %h/scripts/get_webradio_streams.py
+
+[Install]
+WantedBy=default.target

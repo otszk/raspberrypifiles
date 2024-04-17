@@ -1,0 +1,20 @@
+[Unit]
+Description=9 de Julho webradio
+Requires=network-online.target
+BindsTo=sys-devices-platform-soc-3f201000.serial-tty-ttyAMA0-hci0-hci0:11.device
+After=sys-devices-platform-soc-3f201000.serial-tty-ttyAMA0-hci0-hci0:11.device
+
+[Service]
+Type=exec
+User=otszk
+Group=users
+StandardError=null
+StandardOutput=null
+#Environment="XDG_RUNTIME_DIR=/run/user/1000"
+#ExecStart=/usr/bin/mpv https://stm10.voxhd.com.br:9700/listen.pls;/ --volume=50
+ExecStart=/home/otszk/scripts/play_novedejulho.py
+#Restart=always
+#SuccessExitStatus=4
+
+[Install]
+WantedBy=multi-user.target

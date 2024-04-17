@@ -1,0 +1,12 @@
+[Unit]
+Description=Regularly updates the webradio URLs file
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+Persistent=false
+OnCalendar=*-*-* 4:00:00
+Unit=update-stream-urls.service
+
+[Install]
+WantedBy=timers.target
