@@ -1,1 +1,1 @@
-/etc/udev/rules.d/00-btspeaker.rules
+ACTION=="add", ATTRS{id}=="00241011", ENV{SYSTEMD_WANTS}="novedejulho.service"
